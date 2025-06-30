@@ -1,0 +1,7 @@
+site_name: Smoke Detection Docs
+nav:
+  - Home: index.md
+  - Getting Started: start.md
+  - Executing Pipeline: pipeline.md
+  - Predict API: predict.md
+theme: readthedocs
