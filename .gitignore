@@ -1,1 +1,4 @@
+.pytest_cache/
 .venv_sd/
+data/
+src/__pycache__/
