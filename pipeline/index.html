@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Executing Pipeline - Smoke Detection Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Executing Pipeline";
+        var mkdocs_page_input_path = "pipeline.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Smoke Detection Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../start/">Getting Started</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Executing Pipeline</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#data-pipeline-data-preparation">Data Pipeline (Data Preparation)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-preprocessing">Data Preprocessing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#modeling">Modeling</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unit-testing-pytest">Unit Testing (PyTest)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-api-service-fastapi-app">Running API Service (FastAPI App)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-streamlit-service">Running Streamlit Service</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-documentation-mkdocs">Create Documentation (MkDocs)</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../predict/">Predict API</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Smoke Detection Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Executing Pipeline</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="executing-pipeline">Executing Pipeline</h1>
+<p>Execute the pipeline from the root project folder.</p>
+<h2 id="data-pipeline-data-preparation">Data Pipeline (Data Preparation)</h2>
+<pre><code class="language-bash">(your_venv_name) $ python src/data_pipeline.py
+</code></pre>
+<h2 id="data-preprocessing">Data Preprocessing</h2>
+<pre><code class="language-bash">(your_venv_name) $ python src/preprocessing.py
+</code></pre>
+<h2 id="modeling">Modeling</h2>
+<pre><code class="language-bash">(your_venv_name) $ python src/modeling.py
+</code></pre>
+<h2 id="unit-testing-pytest">Unit Testing (PyTest)</h2>
+<pre><code class="language-bash">(your_venv_name) $ pytest src/unit_test.py
+</code></pre>
+<h2 id="running-api-service-fastapi-app">Running API Service (FastAPI App)</h2>
+<pre><code class="language-bash">(your_venv_name) $ python src/api.py
+</code></pre>
+<ul>
+<li>To access the service, open in your browser <code>localhost:8080/</code>.</li>
+<li>To access the API documentation, open in your browser <code>localhost:8080/docs</code>.</li>
+</ul>
+<h2 id="running-streamlit-service">Running Streamlit Service</h2>
+<p><strong>Open it in another terminal.</strong></p>
+<pre><code class="language-bash">(your_venv_name) $ streamlit run src/streamlit.py
+</code></pre>
+<ul>
+<li>To access the service, open in your browser <code>localhost:8501</code>.</li>
+</ul>
+<h2 id="create-documentation-mkdocs">Create Documentation (MkDocs)</h2>
+<ul>
+<li>In your root project folder execute the command below.</li>
+</ul>
+<pre><code class="language-bash"># Creating new MkDocs folder.
+(your_venv_name) $ mkdocs new docs
+</code></pre>
+<ul>
+<li>Change directory into the <code>docs</code> folder, then edit the <code>index.md</code> and <code>mkdocs.yml</code> file.</li>
+<li>After you edit the files, you can run the MkDocs locally by executing the command below.</li>
+</ul>
+<pre><code class="language-bash">(your_venv_name) $ ~/docs mkdocs serve
+</code></pre>
+<ul>
+<li>To access the documentation, open in your browser <code>localhost:8000</code>.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../start/" class="btn btn-neutral float-left" title="Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../predict/" class="btn btn-neutral float-right" title="Predict API">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../start/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../predict/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
