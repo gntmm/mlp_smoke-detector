@@ -1,0 +1,22 @@
+name: smoke-detector
+services:
+  streamlit:
+    build:
+      context: .
+      dockerfile: ./docker/streamlit/Dockerfile
+    image: gontommuhammad/sd_streamlit
+    container_name: streamlit_frontend_sd
+    # streamlit baru bisa berjalan ketika api sudah berjalan.
+    depends_on:
+      - api
+    ports:
+      - "8501:8501"
+
+  api:
+    build:
+      context: .
+      dockerfile: ./docker/api/Dockerfile
+    image: gontommuhammad/sd_api
+    container_name: api_backend_sd
+    ports:
+      - "8080:8080"
